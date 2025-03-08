@@ -21,22 +21,23 @@ namespace calculatorlibrary1
         /// <summary>
         /// listiig hewleh uildel
         /// </summary>
-        public void harah()
+        public string harah()
         {
-            if(toonuud.Count == 0)
+            if (toonuud.Count == 0)
             {
-                Console.WriteLine("memory baihgui");
-                return;
+                return "Memory baihgui";
             }
-            else
+
+            StringBuilder result = new StringBuilder(); 
+
+            for (int i = 0; i < toonuud.Count; i++)
             {
-                Console.WriteLine("memory:");
-                for (int i = 0; i < toonuud.Count; i++)
-                {
-                    Console.WriteLine($"{i + 1}-r too: {toonuud[i]}");
-                }
+                result.AppendLine($"{i + 1}-р тоо: {toonuud[i]}");
             }
+
+            return result.ToString();
         }
+
         /// <summary>
         /// listiig hoosloh buyu ustgah uildel
         /// </summary>
